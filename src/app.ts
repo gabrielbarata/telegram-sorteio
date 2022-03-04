@@ -41,13 +41,14 @@ app.use((req, res, next) => {
 
 app.post(`/secret-path`, (req, res) => {
   console.log(req.body)
+  console.log('postou')
   return bot.handleUpdate(req.body, res)
 })
 
 
-app.get('*', (req, res, next) => {
-  res.json({ a: 1 }).end()
-});
+// app.get('*', (req, res, next) => {
+//   res.json({ a: 1 }).end()
+// });
 
 
 app.get('/lala', (req, res, next) => {
